@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "/home/userq/.nuget/packages/": {}
+    "/home/lex/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/userq/programming/geekbrains/csharp1/tasks/tasks.csproj",
+      "projectUniqueName": "/home/lex/programming/geekbrains/csharpcourse1/tasks.csproj",
       "projectName": "tasks",
-      "projectPath": "/home/userq/programming/geekbrains/csharp1/tasks/tasks.csproj",
-      "packagesPath": "/home/userq/.nuget/packages/",
-      "outputPath": "/home/userq/programming/geekbrains/csharp1/tasks/obj/",
+      "projectPath": "/home/lex/programming/geekbrains/csharpcourse1/tasks.csproj",
+      "packagesPath": "/home/lex/.nuget/packages/",
+      "outputPath": "/home/lex/programming/geekbrains/csharpcourse1/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/userq/.nuget/NuGet/NuGet.Config"
+        "/home/lex/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
