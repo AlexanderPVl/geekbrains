@@ -9,7 +9,7 @@ namespace tasks {
             Console.WriteLine("Enter a dot in format \"x y\"\r\n");
             string[] res = Console.ReadLine().Split(' ');
             if (res.Length != 2) {
-                Console.WriteLine("Incorrect input");
+                Console.WriteLine("Incorrect input. Default value is assigned");
                 return;
             }
             x = double.Parse(res[0]);
