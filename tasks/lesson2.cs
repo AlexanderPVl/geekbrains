@@ -9,11 +9,12 @@ namespace tasks {
             return Math.Min(Math.Min(a1, a2), a3);
         }
         public static double numberOfDigits(){
-            int n = 0;
+            int n;
             try{
                 n = int.Parse(Console.ReadLine());
             } catch {
-                Console.WriteLine("Couldn't parse your input. Set to the default value (0)");
+                n = 0;
+                Console.WriteLine($"Couldn't parse your input. Set to the default value ({n})");
             }
 
             if (n == 0) return 1;
@@ -26,14 +27,14 @@ namespace tasks {
         }
 
         public static int infiniteInput(){
-            Console.WriteLine(">> Task 3\r\nEnter integer numbers in separate lines:");
+            Console.WriteLine(">> Task 3\r\nEnter integer numbers in separate lines (stops if input is 0):");
             int a = 0;
             int sum = 0;
             do{
                 try{
                     a = int.Parse(Console.ReadLine());
                     if (a > 0 && a % 2 == 1) sum += a;
-                } catch{ Console.WriteLine("Couldn't process your input, set to the default value (0)"); a = -1; }
+                } catch{ a = -1; Console.WriteLine($"Couldn't process your input, set to the default value ({a})"); }
                 
                 
             } while(a != 0);
@@ -113,7 +114,7 @@ namespace tasks {
             catch{
                 m = 60;
                 h = 180;
-                Console.WriteLine("Incorrect input. m, h are set to 60, 180");
+                Console.WriteLine($"Incorrect input. m, h are set to {m}, {h}");
             }
             h /= 100;
             double bmi = m / (h * h);
@@ -151,7 +152,7 @@ namespace tasks {
             catch{
                 a = 0;
                 b = 10;
-                Console.WriteLine("Couldn't parse your input. Set a, b to default values (0, 10)");
+                Console.WriteLine($"Couldn't parse your input. Set a, b to default values ({a}, {b})");
             }
             Console.WriteLine("Recursive print:");
             recursionPrint(a, b);
