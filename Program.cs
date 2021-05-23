@@ -4,16 +4,38 @@
 
 namespace tasks
 {
+    public class authentication{
+        public string login;
+        public string password;
+        public authentication(string _login, string _password){
+            login = _login;
+            password = _password;
+        }
+    }
+    
     class Program
     {
+        public static authentication auth = new authentication("root", "GeekBrains");
         static void Main(string[] args)
         {
-            lesson1.enquete();
-            Console.WriteLine("Your bmi = " + lesson1.bmi() + "\r\n");
-            Console.WriteLine("Distance = " + lesson1.euclideanDist(0,0,1,1).ToString("f2") + "\r\n");
-            lesson1.swapVariables(3, 5);
-            lesson1.swapVariables2(7, 8);
-            lesson1.task5("Alexander", "Prikhodov", "Moscow");
+            int i = 0;
+            bool isAuthenticated = false;
+            do{
+                isAuthenticated = lesson2.auth(auth);
+            } while(!isAuthenticated && ++i < 3);
+            if (!isAuthenticated) {
+                Console.WriteLine("Authentication failed");
+                return;
+            }
+            Console.WriteLine("Authentication succeeded");
+
+            commandProcessor commProc = new commandProcessor();
+
+            commProc.printHelp();
+            do {
+                Console.Write("\r\n> ");
+            }
+            while(commProc.processCommand(Console.ReadLine()) != commandProcessor.action.quit);
         }
     }
 }
