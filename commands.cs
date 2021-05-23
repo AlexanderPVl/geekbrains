@@ -55,6 +55,7 @@ namespace tasks{
             Console.WriteLine("lesson n - select a lesson number n");
             Console.WriteLine("task n - select a task number n from currectly selected lesson");
             Console.WriteLine("quit (q) - quit an application");
+            Console.WriteLine("help - print help to console");
             Console.WriteLine("\r\n==================\r\n");
         }
 
@@ -86,6 +87,10 @@ namespace tasks{
                 case "task":{
                     taskExec.runTask(data, usrData.lesson);
                     return action.runTask;
+                }
+                case "help":{
+                    printHelp();
+                    return action.undefined;
                 }
                 default:{
                     Console.WriteLine("Unknown command");
