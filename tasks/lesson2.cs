@@ -99,11 +99,36 @@ namespace tasks {
         }
 
         public static int task5(){
-            Console.WriteLine(">> Task 5 (coming soon)");
+            Console.WriteLine(">> Task 5");
+            double m, h;
+            try{
+                Console.WriteLine("Enter your mass: ");
+                while((m = double.Parse(Console.ReadLine())) <= 0)
+                    Console.WriteLine($"Mass should be a positive number, input was: {m}");
+                
+                Console.WriteLine("Enter your height: ");
+                while((h = double.Parse(Console.ReadLine())) <= 0)
+                    Console.WriteLine($"Height should be a positiove number, input was: {h}");
+            }
+            catch{
+                m = 60;
+                h = 180;
+                Console.WriteLine("Incorrect input. m, h are set to 60, 180");
+            }
+            h /= 100;
+            double bmi = m / (h * h);
+            if (bmi != 18.5){
+                Console.WriteLine("You need to " + (bmi < 18.5 ? "gain " : "lose ") + Math.Sign(18.5 - bmi) * (18.5 - bmi) * h * h + " kg");
+            }else{
+                Console.WriteLine("Your bmi is perfect");
+            }
+            
             return 0;
         }
 
         public static int task6(){
+            Console.WriteLine("This task might take long to complete. Yare you sure you want to run it anyway (y/n)?");
+            if (Console.ReadLine().ToLower() != "y") return 0;
             int i = 0, cnt = 0;
             int N = (int)1e9;
             while(++i < N){
