@@ -63,6 +63,10 @@ namespace tasks {
             return 0;
         }
 
+        public static int digitSum(int n){
+            return n == 0 ? 0 : n % 10 + digitSum(n / 10);
+        }
+
         public static int task1(){
             Console.WriteLine(">>Task1\r\nEnter three numbers in one line:");
             try {
@@ -95,12 +99,18 @@ namespace tasks {
         }
 
         public static int task5(){
-            Console.WriteLine(">> Task 4 (coming soon)");
+            Console.WriteLine(">> Task 5 (coming soon)");
             return 0;
         }
 
         public static int task6(){
-            Console.WriteLine(">> Task 4 (coming soon)");
+            int i = 0, cnt = 0;
+            int N = (int)1e9;
+            while(++i < N){
+                if (i % digitSum(i) == 0) ++cnt;
+                if (i % 1000000 == 0) Console.WriteLine((float)i / N * 100 + " %");
+            }
+            Console.WriteLine($"Number of good numbers is:{cnt}");
             return 0;
         }
 
