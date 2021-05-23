@@ -83,7 +83,7 @@ namespace tasks {
 
         public static int task3(){
             Console.WriteLine(">> Task 3");
-            infiniteInput();
+            Console.WriteLine("Sum: " + infiniteInput());
             return 0;
         }
 
