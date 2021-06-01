@@ -79,6 +79,14 @@ namespace tasks {
 
     public class rational{
         private int a, b;
+        public int A {
+            get => a;
+            set => a = value; 
+        }
+        public int B {
+            get => b;
+            set => b = value;
+        }
         public rational(int a_, int b_){
             if (b_ == 0) {
                 Console.WriteLine("rational: denominator can't be equal to 0");
