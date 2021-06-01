@@ -37,6 +37,20 @@ namespace tasks {
         public static complexNumber operator/(complexNumber z1, complexNumber z2){
             return z1 * z2.inv();
         }
+        public static bool operator==(complexNumber z1, complexNumber z2){
+            return z1.x == z2.x && z1.y == z2.y;
+        }
+        public static bool operator!=(complexNumber z1, complexNumber z2){
+            return !(z1 == z2);
+        }
+        public override bool Equals(object obj){
+            complexNumber o = obj as complexNumber;
+            if (o == null) return false;
+            return x == o.x && y == o.y;
+        }
+        public override int GetHashCode(){
+            return (x.ToString() + "," + y.ToString()).GetHashCode();
+        }
         public static implicit operator complexNumber(double a) => new complexNumber(a, 0);
         public static implicit operator complexNumber(int a) => new complexNumber((double)a, 0);
         public bool isNull(){
