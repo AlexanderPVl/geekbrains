@@ -87,6 +87,9 @@ namespace tasks {
             get => b;
             set => b = value;
         }
+        public double Decimal {
+            get => (double)a / (double)b;
+        }
         public rational(int a_, int b_){
             if (b_ == 0) {
                 Console.WriteLine("rational: denominator can't be equal to 0");

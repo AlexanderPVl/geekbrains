@@ -42,6 +42,7 @@ namespace tasks {
             Console.WriteLine($"a * 2 = {(a * 2).stringify()}");
             Console.WriteLine($"a / 2 = {(a / 2).stringify()}");
             Console.WriteLine($"new rational(0, 1) == 0 is {new rational(0, 1) == 0}");
+            Console.WriteLine($"decimal approximation of a equals {a.Decimal}");
             Console.WriteLine($"a / 0 = {(a / 0).stringify()}");
             return 0;
         }
