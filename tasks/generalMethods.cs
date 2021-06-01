@@ -18,5 +18,17 @@ namespace tasks{
                 Console.Write(line + "\r\n");
             }
         }
+
+        public static double[] enterDoublePair(string str = "Enter a double pair: "){
+            Console.WriteLine(str);
+            try{
+                string[] input = Console.ReadLine().Split(' ');
+                return new double[]{double.Parse(input[0]), double.Parse(input[1])};
+            }
+            catch{
+                Console.WriteLine("Couldn't parse your input");
+            }
+            return new double[]{0, 0};
+        }
     }
 }
