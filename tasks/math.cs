@@ -65,7 +65,7 @@ namespace tasks {
         public complexNumber inv(){
             if (isNull()) {
                 Console.WriteLine("complexNumber: couldn't invert 0");
-                throw new ArgumentException("complexNumber: couldn't invert 0");
+                throw new Exception("complexNumber: couldn't invert 0");
             }
             return this.conjugate() * ( 1 / (Math.Pow(norm(), 2)) );
         }
