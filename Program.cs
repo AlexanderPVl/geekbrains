@@ -18,6 +18,7 @@ namespace tasks
         public static authentication auth = new authentication("root", "GeekBrains");
         static void Main(string[] args)
         {
+            /*
             int i = 0;
             bool isAuthenticated = false;
             do{
@@ -28,7 +29,7 @@ namespace tasks
                 return;
             }
             Console.WriteLine("Authentication succeeded");
-
+            */
             commandProcessor commProc = new commandProcessor();
 
             commProc.printHelp();

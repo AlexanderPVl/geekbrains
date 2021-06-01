@@ -7,7 +7,7 @@ namespace tasks{
     public class userData{
         public int lesson;
         public userData(){
-            lesson = 1;
+            lesson = 3;
         }
     }
 
@@ -19,6 +19,9 @@ namespace tasks{
         public Func<int>[] lesson2_tasks = {
             lesson2.task1, lesson2.task2, lesson2.task3,
             lesson2.task4, lesson2.task5, lesson2.task6, lesson2.task7
+        };
+        public Func<int>[] lesson3_tasks = {
+            lesson3.task1, lesson3.task2, lesson3.task3
         };
 
         public void runTask(string[] data, int lesson){
@@ -36,6 +39,10 @@ namespace tasks{
                 }
                 case 2:{
                     try{ lesson2_tasks[n - 1](); } catch{}
+                    return;
+                }
+                case 3:{
+                    try{ lesson3_tasks[n - 1](); } catch{}
                     return;
                 }
                 default:{
