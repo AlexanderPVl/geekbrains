@@ -3,7 +3,7 @@ using System;
 //Author: Prikhodov Alexander.
 
 namespace tasks {
-    public class lesson3{
+    public class lesson3{ // complexNember and rational are defined in ./math.cs
 
         public static bool task1Cases(complexNumber z, complexNumber w){
             switch(UM.enter("enter an operation that you want to test (+, -, *, /, all, any button to quit)")){
