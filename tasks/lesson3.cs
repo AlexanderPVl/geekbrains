@@ -19,7 +19,7 @@ namespace tasks {
             Console.WriteLine($"z * 2.5 = " + (z * 2.5).stringify());
             Console.WriteLine($"z - 3 = " + (z - 3).stringify());
             Console.WriteLine($"z == 3 + 5i is {z == new complexNumber(3, 5)}");
-            Console.WriteLine($"z.x = {z.x}, z.y = {z.y}");
+            Console.WriteLine($"z.x = {z.X}, z.y = {z.Y}");
             z /= 0;
             return 0;
         }
