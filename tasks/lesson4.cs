@@ -1,5 +1,5 @@
 using System;
-using cSharpCourse1Lib; // custom libarary, link: https://github.com/AlexanderPVl/gbLibraries/tree/master/csharpcourse1Libs
+//using cSharpCourse1Lib; // custom libarary, link: https://github.com/AlexanderPVl/gbLibraries/tree/master/csharpcourse1Libs
 // if installed, content of task 5 might be uncommented
 // all other lesson 4 tasks work without cSharpCourse1Lib
 
@@ -66,8 +66,8 @@ namespace tasks {
         public static int task4(){
             return 0;
         }
-
         public static int task5(){
+            /*
             // a
             Console.WriteLine("task5 content is commented out due to the fact that the project couldn't run otherwise without cSharpCourse1Lib library installed");
             Console.WriteLine("Link to the library: https://github.com/AlexanderPVl/gbLibraries/tree/master/csharpcourse1Libs");
@@ -76,7 +76,7 @@ namespace tasks {
             arr.print();
             Console.WriteLine($"Sum of all elements = {arr.sum()}");
             Console.WriteLine($"Sum of all elements more than 0 = {arr.sumWhere(a => a > 0)}");
-            
+            */
             return 0;
         }
     }
