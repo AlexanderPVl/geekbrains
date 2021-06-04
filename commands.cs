@@ -7,22 +7,25 @@ namespace tasks{
     public class userData{
         public int lesson;
         public userData(){
-            lesson = 3;
+            lesson = 4;
         }
     }
 
     class taskExecuter{
         public Func<int>[] lesson1_tasks = {
-            lesson1.task1, lesson1.task2, lesson1.task3,
-            lesson1.task4, lesson1.task5
-        };
+                lesson1.task1, lesson1.task2, lesson1.task3,
+                lesson1.task4, lesson1.task5
+            };
         public Func<int>[] lesson2_tasks = {
-            lesson2.task1, lesson2.task2, lesson2.task3,
-            lesson2.task4, lesson2.task5, lesson2.task6, lesson2.task7
-        };
+                lesson2.task1, lesson2.task2, lesson2.task3,
+                lesson2.task4, lesson2.task5, lesson2.task6, lesson2.task7
+            };
         public Func<int>[] lesson3_tasks = {
-            lesson3.task1, lesson3.task2, lesson3.task3
-        };
+                lesson3.task1, lesson3.task2, lesson3.task3
+            };
+        public Func<int>[] lesson4_tasks = {
+                lesson4.task1, lesson4.task2, lesson4.task3, lesson4.task4, lesson4.task5
+            };
 
         public void runTask(string[] data, int lesson){
             int n = 0;
@@ -43,6 +46,10 @@ namespace tasks{
                 }
                 case 3:{
                     try{ lesson3_tasks[n - 1](); } catch{}
+                    return;
+                }
+                case 4:{
+                    try{ lesson4_tasks[n - 1](); } catch{}
                     return;
                 }
                 default:{

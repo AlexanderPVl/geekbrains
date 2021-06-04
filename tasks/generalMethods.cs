@@ -1,7 +1,17 @@
 using System;
 
 namespace tasks{
+    public class account{
+        private string login, password;
+        account(string login_, string password_){
+            login = login_;
+            password = password_;
+        }
+    }
+
     public class UM{ //usefulMethods
+        public delegate TResult Func<out TResult>();
+
         public static string enter(string message){
             Console.WriteLine(message);
             return Console.ReadLine();
@@ -29,6 +39,14 @@ namespace tasks{
                 Console.WriteLine("Couldn't parse your input");
             }
             return new double[]{0, 0};
+        }
+
+        public static int countWhere<T>(ref T[] arr, Func<T, T, bool> pred){
+            int cnt = 0;
+            for (int i = 0; i < arr.Length - 1; ++i){
+                if (pred(arr[i], arr[i + 1])) ++cnt;
+            }
+            return cnt;
         }
     }
 }
