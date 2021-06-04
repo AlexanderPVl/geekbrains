@@ -23,6 +23,9 @@ namespace tasks {
 
     public class lesson4{
         public static int task1(){
+
+            Console.WriteLine("File arrayFuncs.cs overrides functions from the library so that tasks could be run without the latter");
+
             int N = 20, l = -10000, r = 10001, counter = 0;
             int[] arr;
             Random rand = new Random();
@@ -34,6 +37,7 @@ namespace tasks {
         }
 
         public static int task2(){
+            Console.WriteLine("File arrayFuncs.cs overrides functions from the library so that tasks could be run without the latter");
             // a
             int l = -10000, r = 10001, N = 20;
             int[] arr;
@@ -47,6 +51,7 @@ namespace tasks {
         }
 
         public static int task3(){
+            Console.WriteLine("File arrayFuncs.cs overrides functions from the library so that tasks could be run without the latter");
             // a, b
             intArray1D intArr = new intArray1D(0, 3, 5);
             intArr.print("intArr = ");
@@ -59,7 +64,6 @@ namespace tasks {
             // b
             intArray1D intArrLib = new intArray1D(0, 2, 10);
             intArrLib.print("intArrLib = ");
-
             return 0;
         }
 
@@ -67,6 +71,7 @@ namespace tasks {
             return 0;
         }
         public static int task5(){
+            Console.WriteLine("You have to install a library to execute this task");
             /*
             // a
             Console.WriteLine("task5 content is commented out due to the fact that the project couldn't run otherwise without cSharpCourse1Lib library installed");
